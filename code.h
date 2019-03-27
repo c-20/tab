@@ -1,5 +1,3 @@
-#define CMDSRC		"/tau/src/cmd"
-#define CMDDIR		"/tau/cmd"
 #define CODEHEAD	"code.h"
 #define CODEHD		CODEHEAD
 #define IF		if
