@@ -1,5 +1,5 @@
-#include "/tau/src/cmd/code.h"
-#include "/tau/src/cmd/utf8.h"
+#include "code.h"
+#include "utf8.h"
 
 // soon: utf8chars ..... and translations ....
 
@@ -22,7 +22,6 @@
 #include "writebuf.h"
 #include "shell.h"
 
-//#define BUFLISTDIRSHEADER	"buflistdirs.h"
 #define TIBBUFDIR       "/V:"
 
 #define NUMAXLEN	8
@@ -38,10 +37,6 @@
 #define NUDIRLISTTABLE  "dirlist"
 
 #define MAXINTDIGITS	10
-//#define NULINEBUFFERLOCALDIR	"/dev/shm/salt/%s"
-//#define NULINEBUFFERREMOTEDIR	"/mnt/buffer/%s"
-//#define NULINEBUFFERPATHSIZE	256
-//#define NULINEBUFFERLINESIZE	4096
 #define TABTIBPATHSIZE		1024
 #define TABTIBLINESIZE		8192
 #define NULINEDISMISS		"<pre>{ \"result\": \"dismiss\" }</pre>"
@@ -59,17 +54,11 @@ IN tib($) {
   char outpathname[TABTIBPATHSIZE + 1];
   char labelbuf[TABLEMAXLABELSIZE + 1];
   char valuebuf[TABLEMAXVALUESIZE + 1];
-//#include BUFLISTDIRSHEADER
-//  char *dirbuf = buflistdirs[10]; // cmd if no s:
-//  CS vardir = TIBBUFDIR;
-//  CS cmddir = TIBBUFDIR;
   CS dirbuf = TIBBUFDIR; // assume cmd vars go in vardir
   CS vardir = dirbuf;
   CS cmddir = dirbuf;
   IN debugmode = 0;
   CS querystr = getenv("QUERY_STRING");
-//  if (argc >= 3 && argv[1][0] == '@' && argv[1][1] == '\0')
-//    { querystr = argv[2]; debugmode = 1; }
   IF (querystr EQNULL AND $N GQ 1) {
     querystr = $1; // ./tib "querystr"
     debugmode = 1; // do not translate query from basecode
