@@ -1,4 +1,4 @@
-#include "/tau/src/cmd/code.h"
+#include "code.h"
 
 #include <stdio.h>
 #include <stdlib.h>
