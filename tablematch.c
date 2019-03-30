@@ -16,10 +16,6 @@
 #define WITHNULL			+ 1
 
 // set in table.c !
-//#define TABLESAVESUBCATPATH		"/dev/shm/salt/table%s"
-//#define TABLESAVECOMMONPATH		"/dev/shm/salt/table"
-//#define TABLESAVECELLARPATH		"/tau/buf/salt/%s"
-//#define TABLESAVECELLAROFFSET		10
 
 #ifdef TABLEHEADER
 int tablematchmain(int argc, char **argv) {
