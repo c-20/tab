@@ -12,10 +12,6 @@
 #define TABLEMAXVALUESIZE		96
 #define WITHNULL				+ 1
 
-//#define TABLESAVESUBCATPATH		"/dev/shm/salt/table%s"
-//#define TABLESAVECOMMONPATH		"/dev/shm/salt/table"
-//#define TABLESAVECELLARPATH		"/tau/buf/salt/%s"
-
 #define TABLESAVESUBCATPATH     "/V:/+%s"
 #define TABLESAVECOMMONPATH	"/V:/+"
 #define TABLESAVECELLARPATH     "/V:/_%s"
