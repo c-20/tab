@@ -1,6 +1,6 @@
 // io/ss/st#?name{f:[#],l:[yn],s:[lr]}
-#include "/tau/src/cmd/code.h"
-#include "/tau/src/cmd/utf8.h"
+#include "code.h"
+#include "utf8.h"
 
 #include <stdio.h>
 #include <stdlib.h>
